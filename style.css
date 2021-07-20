@@ -1,0 +1,72 @@
+@font-face {
+    font-family: raleway;
+    src:local(Raleway-Regular)
+}
+body
+{width: 1340px;
+    margin : auto;}
+/* header*/
+    header 
+{
+    display: flex;
+    justify-content: space-between;
+}
+nav ul
+{
+list-style: none;
+display: flex;
+justify-content: space-around;
+
+}
+nav li a
+{
+    display: block;
+    text-decoration: none;
+    margin-right : 25px;
+}
+#logo 
+{
+    height: 50px;
+    width: 110px;
+    margin-top: 15px;
+}
+/*filtre*/
+
+#info i
+{
+    margin-right: 8px;
+}
+#filtre
+{
+    display: flex;
+    justify-content: space-between;
+}
+#info
+{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+#logo_info
+{
+    margin-right: 8px;
+    color: #0065FC;
+}
+/*hebergement*/
+.article1
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-content : flex-start;
+  
+}
+.article1 img
+{
+    height: 115px;
+    width: 235px;
+}
+.article2 img
+{
+    height: 134px;
+    width: 127px;
+}

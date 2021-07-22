@@ -34,19 +34,30 @@ nav li a
     width: 110px;
     margin-top: 15px;
 }
-/*filtre*/
+img
+{
+    background-size: cover;
+}
+/*Rechercher*/
 #rechercher{
     display: flex;
 }
 
+/*filtre*/
+.icone
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.filtre
+{
+    display: flex;
+    flex-direction: row;
+}
 #info i
 {
     margin-right: 8px;
-}
-#filtre
-{
-    display: flex;
-    justify-content: space-between;
 }
 #info
 {
@@ -60,6 +71,10 @@ nav li a
     color: #0065FC;
 }
 /*hebergement*/
+aside 
+{
+    float: right;
+}
 .article1
 {
     display: flex;
@@ -77,3 +92,24 @@ nav li a
     height: 134px;
     width: 127px;
 }
+/*activités*/
+.activites
+{
+    display: flex;
+    align-items: center;
+}
+.grande_img
+{
+    height: 390px;
+    width: 300px;
+    background-size: cover;
+    position: center;
+}
+.petite_img
+{
+    height: 180px;
+    width: 300px;
+    background-size: cover;
+    position: center;
+}
+/*footer*/

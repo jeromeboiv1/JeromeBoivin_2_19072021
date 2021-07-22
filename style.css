@@ -77,7 +77,7 @@ aside
 }
 .article1
 {
-    display: flex;
+    display: inline-block;
     flex-wrap: wrap;
     align-content : flex-start;
   
@@ -95,7 +95,7 @@ aside
 /*activités*/
 .activites
 {
-    display: flex;
+    display: inline-block;
     align-items: center;
 }
 .grande_img
@@ -113,3 +113,9 @@ aside
     position: center;
 }
 /*footer*/
+.footer
+{
+    display: inline-block;
+    margin-right: 70px;
+    
+}

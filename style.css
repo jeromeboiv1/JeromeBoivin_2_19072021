@@ -5,6 +5,10 @@
 body
 {width: 1340px;
     margin : auto;}
+img {
+    background-size: cover;
+    position: center;
+}
 /* header*/
     header 
 {
@@ -31,6 +35,9 @@ nav li a
     margin-top: 15px;
 }
 /*filtre*/
+#rechercher{
+    display: flex;
+}
 
 #info i
 {

@@ -38,17 +38,31 @@ header img{
     }
 .menu{
     border : 2px solid transparent;
-    padding : 12px;
+    padding : 17px;
 }
 .menu:hover{
-    border-top-color: blue;
-    color:blue;
+    border-top-color:  #0065FC;
+    color:0065FC;
+}
+.subscribe a{
+    color:#0065FC;
 }
 /*Rechercher*/
-#rechercher{
+.rechercher{
     display: flex;
+    align-items: center;
 }
-
+.rechercher i{
+    border: 1px solid  #F2F2F2;
+    background-color:  #F2F2F2;
+    padding : 12px 12px;
+    border-radius: 15px 0 0 15px;
+}
+#bouton_rechercher{
+    padding : 12px 12px;
+    border-radius: 0 15px 15px 0;
+    background-color: #0065FC;
+}
 /*filtre*/
 .filtre
 {

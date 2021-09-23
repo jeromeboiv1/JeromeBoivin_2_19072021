@@ -2,6 +2,63 @@
     font-family: raleway;
     src:local(Raleway-Regular)
 }
+
+/*Media Queries*/
+
+@media screen and (min-width : 500px)
+{
+    .loupe{
+        display : none;
+    }
+    .menu:hover{
+        border-top-color:  #0065FC;
+        color: #0065FC;
+        font-weight: bold;
+    }   
+}
+@media screen and (max-width: 500px) 
+{   
+    .header{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav{
+        display : flex;
+        flex-direction: column-reverse;
+    }
+    .nav li{
+        border-bottom : solid 2px #F2F2F2;
+    }
+    .nav li:hover{
+        border-bottom-color: #0065FC ;
+    }
+    .bouton_rechercher{
+        display: none;
+    }
+    .section1{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .article_hebergement{
+        max-width: 100%;
+    }
+    .hebergement{
+        max-width : 100%;
+    }
+    .main_activites{
+        display: flex;
+        flex-direction: column;
+        }
+    .main_activites img{
+        width: 320px;
+	    height: 120px;
+        object-fit: cover;  
+    }
+
+}
+
+/*HTML*/
+
 body
 {  
     font-family: raleway, sans-serif;
@@ -39,11 +96,7 @@ header img{
     border : 3px solid transparent;
     padding : 21px;
 }
-.menu:hover{
-    border-top-color:  #0065FC;
-    color: #0065FC;
-    font-weight: bold;
-}
+
 .subscribe a{
     color:#0065FC;
 }
@@ -55,20 +108,27 @@ header img{
 .form{
     display: flex;
 }
-.rechercher i{
+#position{
     border: 1px solid  #F2F2F2;
     background-color:  #F2F2F2;
     padding : 12px 12px;
     border-radius: 15px 0 0 15px;
 }
-#bouton_rechercher{
+.loupe{
+    padding : 12px 12px;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #0065FC;
+    border: #0065FC solid 1px;
+    color: white;
+    font-weight: bold;  
+}
+.bouton_rechercher{
     padding : 12px 12px;
     border-radius: 0 15px 15px 0;
     background-color: #0065FC;
     border: #0065FC solid 1px;
     color: white;
-    font-weight: bold;
-    
+    font-weight: bold; 
 }
 /*filtre*/
 .filtre
@@ -77,6 +137,13 @@ header img{
     align-items: center;
     margin-top: 20px;
     flex-wrap: wrap;
+}
+.filtre a:hover{
+    font-size: large;
+    color : #0065FC;
+}
+.icone:hover{
+    background-color: #DEEBFF;
 }
 .icone
 {
@@ -121,32 +188,37 @@ header img{
 /* Hebergements */
 .section1{
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
+    margin-bottom: 50px;
+    }
+.section1 h3{
+    margin-left : 10px;
 }
 .hebergements{ 
     border: solid 1px #F2F2F2;
     border-radius: 20px;
     width: 60%;
     background-color: #F2F2F2;
-    padding : 5px;
-    margin: auto;
+    padding : 30px 20px;
 }
 .articles{
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap;  
 }
-.articles_hebergement{
+.article_hebergement{
     border : solid 1px white;
-    margin-bottom: 15px;
-    border-radius: 25px;
+    border-radius: 20px;
     background-color: white;
     padding: 5px 5px;
- }
+    width: 30%;
+    margin-bottom : 20px;
+    box-shadow: 5px 5px 5px 5px #F2F2F2; 
+}
  .articles img{
-    width : 220px;
+    width : 100%;
     height: 120px;
-    border-radius: 25px 25px 0 0;
+    border-radius: 20px 20px 0 0;
     object-fit: cover;
 }
 .star{
@@ -156,21 +228,17 @@ header img{
     color : #F2F2F2;
 }
 /*Populaire*/
-
 .populaire{
     border: solid 1px #F2F2F2;
     border-radius: 20px;
-    padding: 0 3.5em;
+    padding: 25px 20px;
     background-color: #F2F2F2;
-    width : 25%;
     flex-wrap: wrap;
-
 }
 .populaire_chart{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 .articles_populaires{
     display: flex;
@@ -178,7 +246,7 @@ header img{
     background-color: white;
     border-radius: 25px;
     margin-bottom : 50px;
-    padding : 3px;
+    padding : 5px;
 }
 .articles_populaires img{
     border-radius: 25px 0 0 25px;
@@ -190,7 +258,7 @@ header img{
 .text_article{
     display: flex;
     flex-direction: column;
-    }
+}
 
 /*activités*/
 .main_activites{
@@ -198,8 +266,8 @@ header img{
     justify-content: space-between;
     flex-wrap: wrap;
     margin : 20px 0;
-
 }
+
 .activite{
  border : 1px solid #F2F2F2;
  background-color: white;
@@ -239,7 +307,6 @@ header img{
     width : 300px;
     border-radius: 20px 20px 0 0;
     object-fit: cover;
-
 }
 .petite_img
 {
@@ -249,15 +316,29 @@ header img{
     width : 320px;
     border-radius: 20px 20px 0 0;
 }
+.img_frioul{
+    object-fit: cover;
+    position: center;
+    height: 120px;
+    width : 320px;
+    border-radius: 20px 20px 0 0;
+}
+.img_pomegues{
+    object-fit: cover;
+    position: center;
+    height: 200px;
+    width : 320px;
+    border-radius: 20px 20px 0 0;
+}
 .main_activites h3{
-    margin : 0 0 0 20px;
+    margin : 5px 0 5px 20px;
 }
 /*footer*/
 footer
 {
     display: flex;
     width : 100%;
-    margin-top: 20px;
+    margin-top: 30px;
     background-color: #F2F2F2;
     padding-left: 20px;
 }
@@ -265,11 +346,13 @@ footer
 {
     list-style: none;
     margin-left: -40px;
-    margin-right : 150px;
-
+    margin-right : 250px;
+    margin-bottom: 10px;
 }
 .footer a{
-
     text-decoration: none;
     color: black;
+    
 }
+
+

@@ -1,3 +1,8 @@
+*{
+    margin : 0px;
+    padding : 0px;
+}
+
 @font-face {
     font-family: raleway;
     src:local(Raleway-Regular)
@@ -5,7 +10,7 @@
 
 /*Media Queries*/
 
-@media screen and (min-width : 500px)
+@media screen and (min-width : 501px)
 {
     .loupe{
         display : none;
@@ -14,23 +19,61 @@
         border-top-color:  #0065FC;
         color: #0065FC;
         font-weight: bold;
-    }   
+    }
+    .hebergements{
+        width : 60%;
+        border: solid 1px #F2F2F2;
+        border-radius: 20px;
+        background-color: #F2F2F2;
+    }
+    .article_hebergement{
+        width : 30%;
+    } 
+    .populaire{
+        border-radius: 20px;
+    }      
+    .activite{
+        border : 1px solid #F2F2F2;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px 5px #F2F2F2;
+       }
+    .frioul{
+        margin-top: 50px;
+     }
+    .longchamp{
+        margin-top: 50px;
+    }
 }
 @media screen and (max-width: 500px) 
 {   
+    .loupe{
+        margin-left: -25px;
+    }
     .header{
         display: flex;
-        flex-direction: column;
-    }
-    .nav{
-        display : flex;
         flex-direction: column-reverse;
+        align-items: flex-end;
+        width: 100%; 
     }
-    .nav li{
+    .header li{
         border-bottom : solid 2px #F2F2F2;
+        width : 50%;
+        padding-bottom: 15px;
     }
-    .nav li:hover{
-        border-bottom-color: #0065FC ;
+    .header li:hover{
+        border-bottom-color: #0065FC ;  
+    }
+    header a:hover{
+        color : #0065FC;
+        
+    }
+    .heber_activ{
+        margin-top: 20px;
+        width: 100%;
+    }
+    .liste_menu{
+        text-align: center;
     }
     .bouton_rechercher{
         display: none;
@@ -38,21 +81,38 @@
     .section1{
         display: flex;
         flex-direction: column-reverse;
+        width : 100%;
     }
     .article_hebergement{
-        max-width: 100%;
+        width: 100%;
     }
     .hebergement{
-        max-width : 100%;
+        width : 100%;
+    }
+    .article_hebergement{
+        width : 100%;
     }
     .main_activites{
         display: flex;
         flex-direction: column;
-        }
+    }
     .main_activites img{
-        width: 320px;
+        width: 100%;
 	    height: 120px;
         object-fit: cover;  
+    }
+    .test{
+        border : 1px solid #F2F2F2;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px 5px #F2F2F2;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer{
+        margin-bottom: 30px;
     }
 
 }
@@ -62,6 +122,9 @@
 body
 {  
     font-family: raleway, sans-serif;
+    background-image: url(/images/logo/Reservia@3x.png);
+    background-repeat: no-repeat;
+    background-size: 120px;
 }
 img {
     background-size: cover;
@@ -74,15 +137,8 @@ a{
 }
 .header{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-header img{
-    width: 100px;
-}
-.nav{
-    display: flex;
-    align-items: center; 
+    justify-content: flex-end;
+    margin : 25px 0px;
 }
 .liste_menu{
     display: flex;
@@ -91,12 +147,11 @@ header img{
 .nav a{
     text-decoration: none;
     margin-right: 15px;
-    }
+}
 .menu{
     border : 3px solid transparent;
-    padding : 21px;
+    padding : 22px;
 }
-
 .subscribe a{
     color:#0065FC;
 }
@@ -104,6 +159,7 @@ header img{
 .rechercher{
     display: flex;
     align-items: center;
+    margin : 15px 0px;
 }
 .form{
     display: flex;
@@ -134,9 +190,15 @@ header img{
 .filtre
 {
     display: flex;
-    align-items: center;
     margin-top: 20px;
     flex-wrap: wrap;
+}
+.filtres{
+    display:flex;
+    flex-wrap: wrap;
+}
+.filtre h2{
+    margin-bottom : 10px;
 }
 .filtre a:hover{
     font-size: large;
@@ -192,13 +254,10 @@ header img{
     margin-bottom: 50px;
     }
 .section1 h3{
-    margin-left : 10px;
+    margin : 15px 0px 15px 10px;
 }
 .hebergements{ 
-    border: solid 1px #F2F2F2;
-    border-radius: 20px;
-    width: 60%;
-    background-color: #F2F2F2;
+    
     padding : 30px 20px;
 }
 .articles{
@@ -211,7 +270,6 @@ header img{
     border-radius: 20px;
     background-color: white;
     padding: 5px 5px;
-    width: 30%;
     margin-bottom : 20px;
     box-shadow: 5px 5px 5px 5px #F2F2F2; 
 }
@@ -230,9 +288,9 @@ header img{
 /*Populaire*/
 .populaire{
     border: solid 1px #F2F2F2;
-    border-radius: 20px;
-    padding: 25px 20px;
+    
     background-color: #F2F2F2;
+    padding: 25px 20px;
     flex-wrap: wrap;
 }
 .populaire_chart{
@@ -268,12 +326,6 @@ header img{
     margin : 20px 0;
 }
 
-.activite{
- border : 1px solid #F2F2F2;
- background-color: white;
- border-radius: 20px;
- box-shadow: 5px 5px 5px 5px #F2F2F2;
-}
 .pomegues{
     border : 1px solid #F2F2F2;
     background-color: white;
@@ -284,8 +336,7 @@ header img{
     border : 1px solid #F2F2F2;
     background-color: white;
     border-radius: 20px;
-    box-shadow: 5px 5px 5px 5px #F2F2F2;
-    margin-top: 50px;       
+    box-shadow: 5px 5px 5px 5px #F2F2F2;    
 }
 .NotreDame{
     border : 1px solid #F2F2F2;
@@ -298,7 +349,7 @@ header img{
     background-color: white;
     border-radius: 20px;
     box-shadow: 5px 5px 5px 5px #F2F2F2;
-    margin-top: 50px;
+    
 }
 .grande_img
 {
@@ -337,21 +388,20 @@ header img{
 footer
 {
     display: flex;
-    width : 100%;
-    margin-top: 30px;
+    margin-top: 40px;
     background-color: #F2F2F2;
     padding-left: 20px;
+    padding-top : 20px;
 }
 .footer li
 {
     list-style: none;
-    margin-left: -40px;
-    margin-right : 250px;
-    margin-bottom: 10px;
+    margin: 10px 250px 10px 0px;
 }
 .footer a{
     text-decoration: none;
     color: black;
+    
     
 }
 
